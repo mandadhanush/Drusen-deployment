@@ -41,7 +41,7 @@ st.write("""
          """
          )
 
-st.write("This is a simple image classification web app to predict ")
+st.write("This is a image classification web app to predict ")
 
 file = st.file_uploader("Please upload an image file", type=["jpg", "png","jpeg"])
 #
@@ -53,9 +53,9 @@ else:
     prediction = import_and_predict(image, model)
     
     if prediction[0][1]>0.5:
-        st.write("It is not drusen!")
+        st.write("It is a normal image!")
     elif prediction[0][1]<0.5:
-        st.write("It is drusen")
+        st.write("It is a drusen image!")
     else:
         st.write("give correct image!")
     
